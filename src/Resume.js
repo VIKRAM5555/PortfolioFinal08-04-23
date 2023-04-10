@@ -17,6 +17,12 @@ export function Resume() {
     const doc = new jsPDF();
 
     doc.addImage(resume, "PNG", 10, 5, 170, 270);
+     const blob = doc.output("blob");
+    const url = URL.createObjectURL(blob);
+
+    window.open(url, "_blank");
+
+    URL.revokeObjectURL(url);
     doc.save("Resume.pdf");
   };
   return (
