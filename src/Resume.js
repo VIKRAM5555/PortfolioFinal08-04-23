@@ -14,16 +14,17 @@ export function Resume() {
   const [skill, setSkill] = useState(false);
   const navigate = useNavigate();
   const DownloadFile = () => {
-    const doc = new jsPDF();
+     window.open(resume, "_blank");
+//     const doc = new jsPDF();
 
-    doc.addImage(resume, "PNG", 10, 5, 170, 270);
-     const blob = doc.output("blob");
-    const url = URL.createObjectURL(blob);
+//     doc.addImage(resume, "PNG", 10, 5, 170, 270);
+//      const blob = doc.output("blob");
+//     const url = URL.createObjectURL(blob);
 
-    window.open(url, "_blank");
+//     window.open(url, "_blank");
 
-    URL.revokeObjectURL(url);
-    doc.save("Resume.pdf");
+//     URL.revokeObjectURL(url);
+//     doc.save("Resume.pdf");
   };
   return (
     <div className="Resume">
