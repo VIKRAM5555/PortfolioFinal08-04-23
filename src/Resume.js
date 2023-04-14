@@ -14,7 +14,9 @@ export function Resume() {
   const [skill, setSkill] = useState(false);
   const navigate = useNavigate();
   const DownloadFile = () => {
-     window.open(resume, "_blank");
+  let resumeLink =
+      "https://drive.google.com/file/d/125z0gCwLbCPEAoUjS397WnNpVKCFTc1r/view?usp=sharing"; // Replace "your-file-id" with your actual file ID from Google Drive
+    window.open(resumeLink, "_blank");
 //     const doc = new jsPDF();
 
 //     doc.addImage(resume, "PNG", 10, 5, 170, 270);
